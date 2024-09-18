@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,700;1,100&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #c4bfbf;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-bottom: 4px solid rgb(3, 35, 71);
+}
+
+.navbar .logo img {
+    height: 80vw; /* Adjust the height as needed */
+    width: auto;
+}
+
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar .nav-links .menu {
+    display: flex;
+    gap: 20px;
+    margin-left: auto; /* Ensure the menu aligns properly */
+}
+
+.navbar .nav-links li a {
+    background-color: #0f0347;
+    display: block;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+
+
+.navbar .nav-links li a:hover {
+    color: white !important; /* Use !important to override Bootstrap styles */
+    background-color: rgb(23, 23, 95) !important;
+    border-bottom: 4px solid rgb(27, 3, 94) !important;
+}
+
+/* Set the color of the <a> tags in the navigation bar to navy */
+.navbar .nav-link {
+    color: #0f0347 !important;
+    font-weight: bolder;
+}
+
+/* Optional: Set hover color to make sure it's still visible when hovering */
+.navbar .nav-link:hover {
+    color: #1877f2 !important;
+    border-top: 4px solid #1877f2 !important; 
+}
+.navbar .nav-links input[type="checkbox"] {
+    display: none;
+}
+
+.navbar .menu-button {
+    display: none;
+    color: white;
+    background-color: rgb(3, 3, 65);
+    padding: 14px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: #0f0347;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 400s ease-in-out;
+    }
+
+    .navbar .nav-links .menu {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+
+    .navbar .nav-links li {
+        width: 100%;
+    }
+
+    .navbar .nav-links li a {
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+        border-bottom: 1px solid #575757;
+    }
+
+    .navbar .nav-links input[type="checkbox"]:checked ~ .menu {
+        transform: translateX(0%);
+    }
+
+    .navbar .menu-button {
+        display: block;
+    }
+}
+
+.Section_top {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-image: url(images/cable-wheel.jpeg);
+    background-blend-mode: overlay;
+    /*background-color: rgb(12, 129, 165);  */
+    /*filter: blur(0.1px);  */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+    justify-content:left;
+    animation: change 200s infinite ease-in-out;
+}
+
+.content {
+    font-family: "Times New Roman", Times, serif;;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    text-transform:none;
+}
+
+.content h1 {
+    color: white;
+    font-size: 3vw;
+    font-weight: bolder;
+    letter-spacing: 5px;
+}
+
+.content h1 span {
+    color: white;
+}
+
+.content a {
+    color: #0f0347;
+    background: white;
+    padding: 10px 24px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+.content a:hover {
+    background: #1877f2;
+    color: #fff;
+}
+
+@keyframes change {
+    0% {
+        background-image: url(images/cable-wheel.jpeg);
+    }
+    20% {
+        background-image: url(images/img-2.jpeg);
+    }
+    40% {
+        background-image: url(images/14.jpeg);
+    }
+    60% {
+        background-image: url(images/img-3.jpeg);
+    }
+    80% {
+        background-image: url(images/img-4.jpeg);
+    }
+    100% {
+        background-image: url(images/img-5.jpeg);
+    }
+    120% {
+        background-image: url(images/img0.jpeg);
+    }
+}
+
+/* Social Icons */
+.Section_top {
+    position: relative;
+    padding: 20px;
+    /* Adjust padding as needed */
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 20px; /* Adjust distance from the bottom */
+    left: 20px; /* Adjust distance from the left */
+}
+
+.social-icons i {
+    margin-right: 10px; /* Space between icons */
+    font-size: 24px; /* Adjust icon size */
+    color: #fff; /* Set the icon color */
+}
+
+.social-icons i:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+
+
+/* Container for the About section */
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Style for the main about section */
+.main-about {
+    flex: 1;
+    max-width: 50%;
+    padding-right: 20px;
+}
+
+/* Style for the about text */
+.about-text {
+    margin: 0;
+}
+
+/* Style for the heading */
+.about-text h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+/* Style for the paragraph text */
+.about-text p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Style for the "read more" button */
+.wel-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.wel-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the about image */
+.about-img {
+    flex: 1;
+    max-width: 50%;
+}
+
+/* Ensure the image fits within its container */
+.about-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.chose-us{
+    padding: 5rem 7%;
+    background-color: rgb(84, 166, 221);
+}
+.chose-us h1{
+    color: var(--headerclr);
+    font-size: 40px;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+.chose-us h1 span{
+    color: #f0ebeb;
+}
+.chose-text{
+    color: rgb(248, 242, 242);
+    font-size: 1.5vw;
+    padding: 1rem 10rem;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.main-chose{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.inner-chose{
+    flex: 1 1 200px;
+}
+.chose-icon{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    border: 0.5vw solid white;
+    border-radius: 100%;
+    margin: 0 auto;
+}
+.chose-icon i{
+    font-size: 40px;
+    color: rgb(27, 3, 94);
+    transition: .5s;
+}
+.chose-icon i:hover{
+color: rgb(73, 73, 241);
+transform: translateY(-25px);
+}
+.inner-chose h2{
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+.inner-chose p{
+    font-size: 1.5rem;
+    padding: 0 1rem;
+}
+
+.our-portfolios{
+    padding: 5rem 7%;
+}
+.our-portfolios h1{
+    color: rgb(3, 3, 95);
+    font-size: 40px;
+    text-align: center;
+    padding: 1rem 0;
+}
+.our-s h1 span{
+    color: rgb(3, 3, 95);
+}
+.main-portfolio{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 0 15px grey;
+    padding: 3rem;
+    border-radius: 5px;
+}
+.inner-portfolio{
+    flex: 1 1 300px;
+    box-shadow: 0 0 10px grey;
+    border-radius: 1rem;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 15px;
+    background-color: whitesmoke;
+}
+.inner-portfolio h2{
+    padding: 1rem 0;
+    font-size: 2rem;
+}
+.inner-portfolio p{
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+.inner-portfolio a{
+    padding: 0.5rem 1rem;
+    background: rgb(11, 71, 160);
+    color: white;
+    border-radius: 5px;
+    align-items: center;
+    align-content: center;
+    text-decoration: none;
+}
+.inner-portfolio img {
+    width: 100%;
+    height: 300px; /* Ensures all images have the same height */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    border-radius: 8px; /* Optional: Adjust if you want rounded corners */
+}
+
+  .footer {
+    background: #f5f5f5;
+  }
+  .footer a{  
+    text-decoration: none;
+  }
+  
+  .footer .box-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1rem;
+    padding: 0 2vw;
+  }
+  
+  .footer .box-container .box h3 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: #334;
+    padding: 0.5rem 0;
+  }
+  
+  .footer .box-container .box .link {
+    display: block;
+    /*padding: 0.5rem 0; */
+    font-size: 1.5rem;
+    line-height: 2;
+    color: #777;
+  }
+  
+  .footer .box-container .box .link i {
+    /*padding-right: .5rem;  */
+    color: #2597f4;
+  }
+  .footer .box-container .box {
+    box-sizing: border-box;
+  }
+  
+  .footer .box-container .box .link:hover {
+    color: #2597f4;
+    padding-right: 2rem; 
+  }
+  
+  .footer .box-container .box p {
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    line-height: 2;
+    color: #777;
+  }
+  
+  .footer .box-container .box p span {
+    color: #2597f4;
+  }
+  
+  .footer .box-container .box .email {
+    width: 100%;
+    border: 0.2rem solid #334;
+    padding: 1.2rem 1rem;
+    font-size: 1.2rem;
+    color: #777;
+    margin: 1rem 0;
+  }
+  
+  .footer .box-container .box .share {
+    margin-top: 2rem;
+  }
+  
+  .footer .box-container .box .share a {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 1.7rem;
+    background: #334;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .footer .box-container .box .share a:hover {
+    background: #2597f4;
+  }
+  
+  .footer .credit {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #334;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 0.2rem solid #334;
+    text-align: center;
+  }
+  
+  .footer .credit span {
+    color: #2597f4;
+  }
+  
+
+
